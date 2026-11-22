@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>意思決定術のその先 — Findyウェビナー7本要約</title>
+    <meta name="description" content="Findyウェビナー意思決定術のその先の要約 — エンジニアキャリアとAI時代の開発ガイド">
+    <meta property="og:title" content="意思決定術のその先 — Findyウェビナー7本要約">
+    <meta property="og:description" content="Findyウェビナー意思決定術のその先の要約">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://fukukei23.github.io/findy-webinar-guide/chapters/06-decision-making.html">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙️</text></svg>">
+</head>
+<body>
+    <header class="site-header">
+        <button class="menu-toggle" aria-label="メニュー" id="menuToggle">
+            <span></span><span></span><span></span>
+        </button>
+        <a href="../index.html" class="site-title">🎙️ Findyウェビナー7本要約</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="テーマ切替">
+            <span class="icon-light">☀️</span>
+            <span class="icon-dark">🌙</span>
+        </button>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html">🏠 ホーム</a>
+        </div>
+        
+        <a href="00-overview.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🎙️</span>
+            このガイドについて
+        </a>
+        
+        <a href="01-vpoe-document-screening.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">📄</span>
+            書類選考のホンネ
+        </a>
+        
+        <a href="02-final-interview.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🎯</span>
+            最終面接のウラ側
+        </a>
+        
+        <a href="03-sier-to-fde.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🚀</span>
+            SIerからFDEへ
+        </a>
+        
+        <a href="04-design-tools.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🛠️</span>
+            設計手法を「道具」として
+        </a>
+        
+        <a href="05-python-uv.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🐍</span>
+            Python環境構築とuv
+        </a>
+        
+        <a href="06-decision-making.html"
+           class="sidebar-link active">
+            <span class="sidebar-icon">⚖️</span>
+            意思決定術のその先
+        </a>
+        
+        <a href="07-ai-dlc.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🤖</span>
+            AI-DLCと人の設計判断
+        </a>
+        
+    </nav>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="content">
+        <div class="chapter-nav-top">
+            
+            <a href="05-python-uv.html" class="nav-prev">← Python環境構築とuv</a>
+            
+            
+            <a href="07-ai-dlc.html" class="nav-next">AI-DLCと人の設計判断 →</a>
+            
+        </div>
+
+        <article class="chapter-body">
+            <h1>06 意思決定術のその先 — AI時代に変えるべき判断の前提</h1>
+<aside class="tldr">
+<p><strong>3行で分かる</strong>: AIは意思決定の「前提」を外側（目的・要求水準）と内側（手段・コスト）の両面から変えています。
+「リスクを取れる状態を作る」に加え、「決めたことを問い直せる状態を作る」が必須の時代です。
+コードは素早く直せても、変更が生んだ影響（データ消失・信頼失墜）は取り消せません——「やりやすくなった」と「リスクが減った」は別の話です。</p>
+</aside>
+<hr />
+<h2>この章について</h2>
+<p>『ソフトウェアアーキテクトのための意思決定術』の著者・島田浩二氏（えにしテック）が、AI時代に意思決定の前提がどう変わるかを語ったセッションです。</p>
+<h2>意思決定の基本</h2>
+<p>意思決定は「限られた情報の中で賭けを置いてリスクを取る行為」です。基本戦略は3つです。</p>
+<ol>
+<li>タイミングをコントロールして先送りする</li>
+<li>可逆的な方に寄せる</li>
+<li>決定材料を増やす</li>
+</ol>
+<h2>AIの変化はデコボコ</h2>
+<ul>
+<li>AIの変化は「安くなる部分・不変・むしろ高くつく部分」とデコボコです</li>
+<li>価値とコストが同時に動きます</li>
+</ul>
+<h2>外側の変化（目的・要求水準）</h2>
+<ul>
+<li>攻撃者の経済性が変化する</li>
+<li>利用者がAIエージェントの代理に変わり、アクセスパターンが変化する</li>
+<li>結果として求める品質水準が変わる</li>
+</ul>
+<h2>内側の変化（手段・コスト）</h2>
+<ul>
+<li>調査・設計検討・プロトタイピング等のコストが低下し、見送ってきたアプローチが可能になる</li>
+<li>運用の観測・障害調査もAI支援で、品質管理活動の選択肢が拡大する</li>
+</ul>
+<h2>注意: 「やりやすくなった」と「リスクが減った」は別の話</h2>
+<ul>
+<li>コードは素早く直せても、変更が生んだ影響（データ消失・信頼失墜）は取り消せません</li>
+<li>変更容易性の向上とリスクの低減を混同しないことが重要です</li>
+</ul>
+<h2>戦略のアップデート</h2>
+<p>基本戦略3つのAI時代版です。</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>戦略</th>
+<th>AI時代の変化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>先送り</td>
+<td>「手前で決めるもの」と「後でいいもの」の差が激化する</td>
+</tr>
+<tr>
+<td>可逆性</td>
+<td>「戻せること」と「影響を取り消せること」は違う</td>
+</tr>
+<tr>
+<td>決定材料</td>
+<td>数より「判断に効くか」が重要（エージェントは見えるコンテキスト内でしか選べない）</td>
+</tr>
+</tbody>
+</table></div>
+<h2>実践4点</h2>
+<ol>
+<li>前提点検のタイミングを設計する（定期サイクル+新モデル登場等のトリガー）</li>
+<li>ADR（Architecture Decision Record）に見直しトリガーを残す——「どういう条件が変わったら見直すか」を明記する。定量的ならAIにチェック可能</li>
+<li>品質を観測・検証できる状態を作る——判断は人間が押す。AIトークンは機能開発より先に見直し基盤へ</li>
+<li>AIに何を任せどう統制するかも、アーキテクチャ上の意思決定として扱う</li>
+</ol>
+<div class="callout callout-tip"><p>💡 Tip: Q&amp;Aでの回答として「ADRはGitリポジトリへ置く（エージェントが参照可能な場所）」「前任者不在時は無理に過去ADRを作らず、引き継いだ時点から書き出して良い」という実務的な助言がありました。</p></div>
+<h2>実践チェックリスト</h2>
+<p>意思決定の見直し基盤を作るチェックリストです。</p>
+<ul>
+<li>[ ] 過去の意思決定に「見直しトリガー」が書かれているか（ADR等）</li>
+<li>[ ] 「やりやすくなった」を「リスクが減った」と混同していないか</li>
+<li>[ ] 品質を観測・検証できる状態があるか</li>
+<li>[ ] AIに任せる範囲と統制の方法を、アーキテクチャ判断として決めているか</li>
+<li>[ ] 決定材料を「数」でなく「判断に効くか」で選んでいるか</li>
+</ul>
+<h2>ふりかえり</h2>
+<p>AIによって調査・検討・プロトタイピングが安価になった今、価値があるのは「決めたことを問い直せる状態を作る」ことです。ADRに見直しトリガーを残し、品質を観測できる基盤を作ることが、AI時代の意思決定の土台になります。</p>
+
+        </article>
+
+        <nav class="chapter-nav-bottom">
+            
+            <a href="05-python-uv.html" class="nav-card prev">
+                <span class="nav-label">← 前の章</span>
+                <span class="nav-title">🐍 Python環境構築とuv</span>
+            </a>
+            
+            
+            <a href="07-ai-dlc.html" class="nav-card next">
+                <span class="nav-label">次の章 →</span>
+                <span class="nav-title">🤖 AI-DLCと人の設計判断</span>
+            </a>
+            
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <p>Findy Webinar Guide — <a href="https://github.com/fukukei23/findy-webinar-guide">GitHub</a>
+         · <a href="https://fukukei23.github.io/guides/interview-glossary/">面接用語集</a>
+         · <a href="https://fukukei23.github.io/guides/">技術ガイド集</a>
+         · <a href="https://fukukei23.github.io/">fukukei23</a></p>
+        <p class="site-version">v1.1 · 2026.11.23</p>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default',
+            themeVariables: { fontSize: '14px' }
+        });
+    </script>
+</body>
+</html>

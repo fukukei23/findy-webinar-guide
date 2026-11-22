@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>設計手法を「道具」として — Findyウェビナー7本要約</title>
+    <meta name="description" content="Findyウェビナー設計手法を「道具」としての要約 — エンジニアキャリアとAI時代の開発ガイド">
+    <meta property="og:title" content="設計手法を「道具」として — Findyウェビナー7本要約">
+    <meta property="og:description" content="Findyウェビナー設計手法を「道具」としての要約">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://fukukei23.github.io/findy-webinar-guide/chapters/04-design-tools.html">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙️</text></svg>">
+</head>
+<body>
+    <header class="site-header">
+        <button class="menu-toggle" aria-label="メニュー" id="menuToggle">
+            <span></span><span></span><span></span>
+        </button>
+        <a href="../index.html" class="site-title">🎙️ Findyウェビナー7本要約</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="テーマ切替">
+            <span class="icon-light">☀️</span>
+            <span class="icon-dark">🌙</span>
+        </button>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html">🏠 ホーム</a>
+        </div>
+        
+        <a href="00-overview.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🎙️</span>
+            このガイドについて
+        </a>
+        
+        <a href="01-vpoe-document-screening.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">📄</span>
+            書類選考のホンネ
+        </a>
+        
+        <a href="02-final-interview.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🎯</span>
+            最終面接のウラ側
+        </a>
+        
+        <a href="03-sier-to-fde.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🚀</span>
+            SIerからFDEへ
+        </a>
+        
+        <a href="04-design-tools.html"
+           class="sidebar-link active">
+            <span class="sidebar-icon">🛠️</span>
+            設計手法を「道具」として
+        </a>
+        
+        <a href="05-python-uv.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🐍</span>
+            Python環境構築とuv
+        </a>
+        
+        <a href="06-decision-making.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">⚖️</span>
+            意思決定術のその先
+        </a>
+        
+        <a href="07-ai-dlc.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🤖</span>
+            AI-DLCと人の設計判断
+        </a>
+        
+    </nav>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="content">
+        <div class="chapter-nav-top">
+            
+            <a href="03-sier-to-fde.html" class="nav-prev">← SIerからFDEへ</a>
+            
+            
+            <a href="05-python-uv.html" class="nav-next">Python環境構築とuv →</a>
+            
+        </div>
+
+        <article class="chapter-body">
+            <h1>04 設計手法を「道具」として — 適合性で使い分ける発想</h1>
+<aside class="tldr">
+<p><strong>3行で分かる</strong>: 設計手法は絶対的な正解ではなく「道具」です。
+道具の価値は素材や構造そのものより「使い方と対象との適合性」で決まります。
+「私たちは道具の使い手であると同時に、道具の作り手でもある」——使う側の意識が重要です。</p>
+</aside>
+<hr />
+<h2>この章について</h2>
+<p>「今こそ聞きたいソフトウェア設計」シリーズ#4として、すえなみ氏（TwoGate・mi2zq）が設計手法の使い方を語ったセッションです。手法そのものを紹介するのでなく、「手法とどう付き合うか」というメタな視点を扱います。</p>
+<h2>道具の価値は適合性で決まる</h2>
+<ul>
+<li>道具の価値は素材や構造そのものより、「使い方と対象との適合性」で決まります</li>
+<li>設計手法も同じ——対象やチームとの適合性で使い分けます</li>
+</ul>
+<h2>使い手であると同時に作り手でもある</h2>
+<div class="callout callout-info"><p>「私たちは道具の使い手であると同時に、道具の作り手でもある」（講演内・2691秒地点の引用）</p></div>
+<ul>
+<li>手法を使う側が、手法の解釈や運用を作り込んでいるという意識です</li>
+<li>手法はそのまま信仰対象にせず、自分の文脈に合わせて調整する</li>
+</ul>
+<h2>手法が定義するもの</h2>
+<ul>
+<li>手法は要素間の依存関係や、共有・分離の境界を定義するものです</li>
+<li>その定義が自分の業務と合うかどうかの照合で判断します</li>
+</ul>
+<h2>用途固定化の罠</h2>
+<ul>
+<li>使い慣れた道具の用途は固定化され、元の意図や代替用途が見えなくなる</li>
+<li>「いつもこの手法を使う」が定着すると、なぜその手法なのかの問い直しが失われます</li>
+</ul>
+<h2>意図が伝わる形の設計</h2>
+<ul>
+<li>具体的な形には複数の解釈が生まれます</li>
+<li>そのため意図が利用者に伝わる形の設計が必要です</li>
+</ul>
+<h2>実践チェックリスト</h2>
+<p>設計手法との付き合い方を見直すチェックリストです。</p>
+<ul>
+<li>[ ] 今使っている手法を「なぜ」選んだのか説明できるか</li>
+<li>[ ] 手法がチーム・業務との適合性で合っているか定期的に照合しているか</li>
+<li>[ ] 手法の定義する境界（依存関係・共有と分離）を業務に合わせて調整しているか</li>
+<li>[ ] 「いつものやり方」が用途固定化していないか問い直しているか</li>
+<li>[ ] 設計の意図が利用者に伝わる形になっているか</li>
+</ul>
+<h2>ふりかえり</h2>
+<p>設計手法を「正解」として採用するのではなく、「道具」として目的に合わせて選び・調整する。使い手であると同時に作り手でもあるという意識が、手法を形骸化させずに活かし続ける鍵です。</p>
+
+        </article>
+
+        <nav class="chapter-nav-bottom">
+            
+            <a href="03-sier-to-fde.html" class="nav-card prev">
+                <span class="nav-label">← 前の章</span>
+                <span class="nav-title">🚀 SIerからFDEへ</span>
+            </a>
+            
+            
+            <a href="05-python-uv.html" class="nav-card next">
+                <span class="nav-label">次の章 →</span>
+                <span class="nav-title">🐍 Python環境構築とuv</span>
+            </a>
+            
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <p>Findy Webinar Guide — <a href="https://github.com/fukukei23/findy-webinar-guide">GitHub</a>
+         · <a href="https://fukukei23.github.io/guides/interview-glossary/">面接用語集</a>
+         · <a href="https://fukukei23.github.io/guides/">技術ガイド集</a>
+         · <a href="https://fukukei23.github.io/">fukukei23</a></p>
+        <p class="site-version">v1.1 · 2026.11.23</p>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default',
+            themeVariables: { fontSize: '14px' }
+        });
+    </script>
+</body>
+</html>

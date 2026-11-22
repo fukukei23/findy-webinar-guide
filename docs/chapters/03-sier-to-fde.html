@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIerからFDEへ — Findyウェビナー7本要約</title>
+    <meta name="description" content="FindyウェビナーSIerからFDEへの要約 — エンジニアキャリアとAI時代の開発ガイド">
+    <meta property="og:title" content="SIerからFDEへ — Findyウェビナー7本要約">
+    <meta property="og:description" content="FindyウェビナーSIerからFDEへの要約">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://fukukei23.github.io/findy-webinar-guide/chapters/03-sier-to-fde.html">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙️</text></svg>">
+</head>
+<body>
+    <header class="site-header">
+        <button class="menu-toggle" aria-label="メニュー" id="menuToggle">
+            <span></span><span></span><span></span>
+        </button>
+        <a href="../index.html" class="site-title">🎙️ Findyウェビナー7本要約</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="テーマ切替">
+            <span class="icon-light">☀️</span>
+            <span class="icon-dark">🌙</span>
+        </button>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html">🏠 ホーム</a>
+        </div>
+        
+        <a href="00-overview.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🎙️</span>
+            このガイドについて
+        </a>
+        
+        <a href="01-vpoe-document-screening.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">📄</span>
+            書類選考のホンネ
+        </a>
+        
+        <a href="02-final-interview.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🎯</span>
+            最終面接のウラ側
+        </a>
+        
+        <a href="03-sier-to-fde.html"
+           class="sidebar-link active">
+            <span class="sidebar-icon">🚀</span>
+            SIerからFDEへ
+        </a>
+        
+        <a href="04-design-tools.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🛠️</span>
+            設計手法を「道具」として
+        </a>
+        
+        <a href="05-python-uv.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🐍</span>
+            Python環境構築とuv
+        </a>
+        
+        <a href="06-decision-making.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">⚖️</span>
+            意思決定術のその先
+        </a>
+        
+        <a href="07-ai-dlc.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🤖</span>
+            AI-DLCと人の設計判断
+        </a>
+        
+    </nav>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="content">
+        <div class="chapter-nav-top">
+            
+            <a href="02-final-interview.html" class="nav-prev">← 最終面接のウラ側</a>
+            
+            
+            <a href="04-design-tools.html" class="nav-next">設計手法を「道具」として →</a>
+            
+        </div>
+
+        <article class="chapter-body">
+            <h1>03 SIerからFDEへ — 定着まで面倒を見る仕事の実像</h1>
+<aside class="tldr">
+<p><strong>3行で分かる</strong>: FDEとは「納品で終わらず定着まで面倒を見る」仕事で、SIer経験は十分活きます。
+SIerとの最大の違いはビジネスモデル——SIerは「納品が区切り」、FDEは「ゴールがない」です。
+「全部見たい・課題に向き合いたい」人がFDEに向いています。</p>
+</aside>
+<hr />
+<h2>この章について</h2>
+<p>LayerXの白井英氏、JDSCの高見英幸氏、Gen-AXの関根佑斗氏の3社パネルで、SIerからFDEへのキャリアパスを語ったセッションです。</p>
+<h2>3社のFDE像</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>会社</th>
+<th>FDE像</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JDSC</td>
+<td>AIエージェント開発からAX戦略→ビジネス実装→POC→本番→継続的改善を統括</td>
+</tr>
+<tr>
+<td>LayerX</td>
+<td>「技術的知識を有して課題解決を行う人間」・コーディングは手段・プラットフォーム+FDで価値提供</td>
+</tr>
+<tr>
+<td>Gen-AX</td>
+<td>AIオペレーター導入（遠隔検証→PoC→本番→定着）・プロダクトへの課題還元・標準化と知見集約</td>
+</tr>
+</tbody>
+</table></div>
+<h2>SIerとの最大の違い: ビジネスモデル</h2>
+<ul>
+<li>SIerは「納品が区切り」</li>
+<li>FDEは「ゴールがない」——定着してどう使われるかまで見る</li>
+</ul>
+<h2>FDEを選んだ理由（Gen-AX関根氏の3点）</h2>
+<ol>
+<li>現場の最前線に立ちたかった</li>
+<li>システムを育てる側に回りたかった</li>
+<li>クラウド/インフラの強みを軸にアプリ・AIも扱う「ピラミッド型技術者」になりたかった</li>
+</ol>
+<p>転職時に刺さった言葉は「全てのお客さんの最初から最後まで全部見たい」で、これがFDE向きと評価されました。</p>
+<h2>コア業務への入り込み方（リモート時代）</h2>
+<ul>
+<li>「何かあったときにこの人に連絡しよう」と思われる存在になる</li>
+<li>要望をプロダクトに反映して叶える</li>
+<li>初回商談で和ませて、実績で次につなぐ</li>
+</ul>
+<h2>ギャップ</h2>
+<p>FDEに転身して感じたギャップは次の通りです。</p>
+<ul>
+<li>扱い領域が一気に広がる</li>
+<li>社内他部署との連携が激増（FDが起点）</li>
+<li>コンサル要素（代案を複数）を求められる</li>
+</ul>
+<h2>課題特定: プロトタイピング重視</h2>
+<ul>
+<li>真のネックは「お客さん自身も分かっていない」こと</li>
+<li>プロトタイプを早く作って見せるとリアルな反応が返り、本当のネックに辿り着ける</li>
+<li>3社共通でプロトタイピングを重視しています</li>
+</ul>
+<h2>FDEへのステップ</h2>
+<ul>
+<li>今までの技術は絶対生きる（他の人と違う強みになる）</li>
+<li>新しい領域の勉強と現場での経験を並行する</li>
+<li>AI駆動開発=「システム開発をしている人と業務に向き合うこと」——試して面白ければチャレンジ</li>
+</ul>
+<h2>実践チェックリスト</h2>
+<p>FDEキャリアを検討する際のチェックリストです。</p>
+<ul>
+<li>[ ] 「納品が区切り」でなく「定着まで見る」ことに魅力を感じるか</li>
+<li>[ ] 今までの技術経験が、他の人と違う強みとして説明できるか</li>
+<li>[ ] 複数の代案を出すコンサル要素を厭わないか</li>
+<li>[ ] プロトタイプを早く作って見せる習慣があるか</li>
+<li>[ ] 「全部見たい・課題に向き合いたい」という動機を語れるか</li>
+</ul>
+<h2>ふりかえり</h2>
+<p>FDEは「システムを納品する人」から「システムが定着するまで付き合う人」への転換です。SIerで培った技術はそのまま強みになり、求められるのは技術に業務理解と課題特定の視点を足すことです。</p>
+
+        </article>
+
+        <nav class="chapter-nav-bottom">
+            
+            <a href="02-final-interview.html" class="nav-card prev">
+                <span class="nav-label">← 前の章</span>
+                <span class="nav-title">🎯 最終面接のウラ側</span>
+            </a>
+            
+            
+            <a href="04-design-tools.html" class="nav-card next">
+                <span class="nav-label">次の章 →</span>
+                <span class="nav-title">🛠️ 設計手法を「道具」として</span>
+            </a>
+            
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <p>Findy Webinar Guide — <a href="https://github.com/fukukei23/findy-webinar-guide">GitHub</a>
+         · <a href="https://fukukei23.github.io/guides/interview-glossary/">面接用語集</a>
+         · <a href="https://fukukei23.github.io/guides/">技術ガイド集</a>
+         · <a href="https://fukukei23.github.io/">fukukei23</a></p>
+        <p class="site-version">v1.1 · 2026.11.23</p>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default',
+            themeVariables: { fontSize: '14px' }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>書類選考のホンネ — Findyウェビナー7本要約</title>
+    <meta name="description" content="Findyウェビナー書類選考のホンネの要約 — エンジニアキャリアとAI時代の開発ガイド">
+    <meta property="og:title" content="書類選考のホンネ — Findyウェビナー7本要約">
+    <meta property="og:description" content="Findyウェビナー書類選考のホンネの要約">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://fukukei23.github.io/findy-webinar-guide/chapters/01-vpoe-document-screening.html">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙️</text></svg>">
+</head>
+<body>
+    <header class="site-header">
+        <button class="menu-toggle" aria-label="メニュー" id="menuToggle">
+            <span></span><span></span><span></span>
+        </button>
+        <a href="../index.html" class="site-title">🎙️ Findyウェビナー7本要約</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="テーマ切替">
+            <span class="icon-light">☀️</span>
+            <span class="icon-dark">🌙</span>
+        </button>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html">🏠 ホーム</a>
+        </div>
+        
+        <a href="00-overview.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🎙️</span>
+            このガイドについて
+        </a>
+        
+        <a href="01-vpoe-document-screening.html"
+           class="sidebar-link active">
+            <span class="sidebar-icon">📄</span>
+            書類選考のホンネ
+        </a>
+        
+        <a href="02-final-interview.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🎯</span>
+            最終面接のウラ側
+        </a>
+        
+        <a href="03-sier-to-fde.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🚀</span>
+            SIerからFDEへ
+        </a>
+        
+        <a href="04-design-tools.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🛠️</span>
+            設計手法を「道具」として
+        </a>
+        
+        <a href="05-python-uv.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🐍</span>
+            Python環境構築とuv
+        </a>
+        
+        <a href="06-decision-making.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">⚖️</span>
+            意思決定術のその先
+        </a>
+        
+        <a href="07-ai-dlc.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🤖</span>
+            AI-DLCと人の設計判断
+        </a>
+        
+    </nav>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="content">
+        <div class="chapter-nav-top">
+            
+            <a href="00-overview.html" class="nav-prev">← このガイドについて</a>
+            
+            
+            <a href="02-final-interview.html" class="nav-next">最終面接のウラ側 →</a>
+            
+        </div>
+
+        <article class="chapter-body">
+            <h1>01 書類選考のホンネ — 採用側が職務経歴書で何を見ているか</h1>
+<aside class="tldr">
+<p><strong>3行で分かる</strong>: 職務経歴書は「作業の羅列」でなく、事業目標との接続・再現性・伸びしろを論理的につなげると評価されます。
+採用側は「過去の実績・現在のスキル水準・自社での再現性・今後の伸びしろ」の4点を確認しています。
+改善結果は事業目標とのつながり（Why）とセットで書くことが鍵です。</p>
+</aside>
+<hr />
+<h2>この章について</h2>
+<p>FindyのVPoE（神谷健氏）と青野実苗氏が、書類選考で実際に何を見ているかを語ったセッションです。採用側の生の視点を知ることで、職務経歴書の書き方を客観的に見直せます。</p>
+<h2>採用側が見る4点</h2>
+<p>採用側は職務経歴書から次の4点を確認しています。</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>見る点</th>
+<th>意味</th>
+<th>職務経歴書での対応</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>過去の実績</td>
+<td>何をやって成果を出したか</td>
+<td>具体的な成果・数値で示す</td>
+</tr>
+<tr>
+<td>現在のスキル水準</td>
+<td>今どの程度できるか</td>
+<td>成果から現在のレベルを推論できる形にする</td>
+</tr>
+<tr>
+<td>自社での再現性</td>
+<td>うちでも同じことができるか</td>
+<td>環境の違いを吸収できる汎用性を示す</td>
+</tr>
+<tr>
+<td>今後の伸びしろ</td>
+<td>これから成長する人か</td>
+<td>学び続ける姿勢・成長の軌跡を示す</td>
+</tr>
+</tbody>
+</table></div>
+<h2>よくあるNG: 「作ったもの・使った技術」の並べ立て</h2>
+<ul>
+<li>「○○を作りました・△△を使いました」の並べ立てだけでは不十分です</li>
+<li>「何のために何を解決するか」を明確にすることが必要です</li>
+<li>技術スタックの列挙は採用側に「何ができる人か」を伝えられません</li>
+</ul>
+<h2>良い書き方: 事業目標との接続</h2>
+<ul>
+<li>改善結果は事業目標とのつながり（Why）とセットで書く</li>
+<li>商談同席・現場赴きなど、業務理解を深める行動のエピソードも評価対象になります</li>
+<li>要件が本当に求められるものかを見直して技術要件へ落とし込んだ経験は強い素材になります</li>
+</ul>
+<h2>文章構成も評価対象</h2>
+<p>職務経歴書の文章構成自体も評価対象です。採用側が読みやすい構成として言及されていたのが次の流れです。</p>
+<ol>
+<li>成果</li>
+<li>課題</li>
+<li>行動</li>
+<li>結果</li>
+<li>再現性</li>
+</ol>
+<p>この順で論理的につなげると、「この人は次の職場でも同じように成果を出せる」と推論させやすくなります。</p>
+<h2>実践チェックリスト</h2>
+<p>自分の職務経歴書をこの4点と照らして見直すチェックリストです。</p>
+<ul>
+<li>[ ] 各実績に「何のために」が書かれているか（事業目標との接続）</li>
+<li>[ ] 成果が「成果→課題→行動→結果→再現性」の流れで読めるか</li>
+<li>[ ] 「作ったもの・使った技術」の羅列だけで終わっていないか</li>
+<li>[ ] 業務理解を深めた行動（商談同席・現場赴き等）のエピソードがあるか</li>
+<li>[ ] 読んだ採用側に「自社でも再現できそう」と思わせる汎用性があるか</li>
+</ul>
+<h2>ふりかえり</h2>
+<p>職務経歴書は「自分の作業記録」ではなく「採用側への論証文」です。採用側が4点を確認しているという前提で書き直すだけで、同じ経験でも伝わり方が変わります。</p>
+
+        </article>
+
+        <nav class="chapter-nav-bottom">
+            
+            <a href="00-overview.html" class="nav-card prev">
+                <span class="nav-label">← 前の章</span>
+                <span class="nav-title">🎙️ このガイドについて</span>
+            </a>
+            
+            
+            <a href="02-final-interview.html" class="nav-card next">
+                <span class="nav-label">次の章 →</span>
+                <span class="nav-title">🎯 最終面接のウラ側</span>
+            </a>
+            
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <p>Findy Webinar Guide — <a href="https://github.com/fukukei23/findy-webinar-guide">GitHub</a>
+         · <a href="https://fukukei23.github.io/guides/interview-glossary/">面接用語集</a>
+         · <a href="https://fukukei23.github.io/guides/">技術ガイド集</a>
+         · <a href="https://fukukei23.github.io/">fukukei23</a></p>
+        <p class="site-version">v1.1 · 2026.11.23</p>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default',
+            themeVariables: { fontSize: '14px' }
+        });
+    </script>
+</body>
+</html>

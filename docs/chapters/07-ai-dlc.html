@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-DLCと人の設計判断 — Findyウェビナー7本要約</title>
+    <meta name="description" content="FindyウェビナーAI-DLCと人の設計判断の要約 — エンジニアキャリアとAI時代の開発ガイド">
+    <meta property="og:title" content="AI-DLCと人の設計判断 — Findyウェビナー7本要約">
+    <meta property="og:description" content="FindyウェビナーAI-DLCと人の設計判断の要約">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://fukukei23.github.io/findy-webinar-guide/chapters/07-ai-dlc.html">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙️</text></svg>">
+</head>
+<body>
+    <header class="site-header">
+        <button class="menu-toggle" aria-label="メニュー" id="menuToggle">
+            <span></span><span></span><span></span>
+        </button>
+        <a href="../index.html" class="site-title">🎙️ Findyウェビナー7本要約</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="テーマ切替">
+            <span class="icon-light">☀️</span>
+            <span class="icon-dark">🌙</span>
+        </button>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html">🏠 ホーム</a>
+        </div>
+        
+        <a href="00-overview.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🎙️</span>
+            このガイドについて
+        </a>
+        
+        <a href="01-vpoe-document-screening.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">📄</span>
+            書類選考のホンネ
+        </a>
+        
+        <a href="02-final-interview.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🎯</span>
+            最終面接のウラ側
+        </a>
+        
+        <a href="03-sier-to-fde.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🚀</span>
+            SIerからFDEへ
+        </a>
+        
+        <a href="04-design-tools.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🛠️</span>
+            設計手法を「道具」として
+        </a>
+        
+        <a href="05-python-uv.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🐍</span>
+            Python環境構築とuv
+        </a>
+        
+        <a href="06-decision-making.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">⚖️</span>
+            意思決定術のその先
+        </a>
+        
+        <a href="07-ai-dlc.html"
+           class="sidebar-link active">
+            <span class="sidebar-icon">🤖</span>
+            AI-DLCと人の設計判断
+        </a>
+        
+    </nav>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="content">
+        <div class="chapter-nav-top">
+            
+            <a href="06-decision-making.html" class="nav-prev">← 意思決定術のその先</a>
+            
+            
+        </div>
+
+        <article class="chapter-body">
+            <h1>07 AI-DLCと人の設計判断 — AIが計画し人が承認する開発</h1>
+<aside class="tldr">
+<p><strong>3行で分かる</strong>: AI-DLCは「AIが計画・生成し、人が意図を持ち検証・承認する」開発ライフサイクルです。
+コードは書かなくなるが、「意図を正しく伝え判断する力」がエンジニアの核心になります。
+AIは汎用知識は多いがその会社独自のドメイン知識は持たない——独自ドメインが反映されているかを判断するのは人間だけです。</p>
+</aside>
+<hr />
+<h2>この章について</h2>
+<p>「今こそ聞きたいソフトウェア設計」シリーズ#3として、福井厚氏としょぼちむ氏（AWSジャパン）がAI-DLC（AI-Driven Development Life Cycle）を語ったセッションです。</p>
+<h2>2パターンの限界</h2>
+<p>現在主流の2パターンは、どちらもAIの能力をフルに引き出せていないという指摘です。</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>パターン</th>
+<th>内容</th>
+<th>限界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AIアシステッド</td>
+<td>エンジニアが全部設計し、一部だけAI</td>
+<td>AIの能力をフルに使えていない</td>
+</tr>
+<tr>
+<td>AIマネージド</td>
+<td>バイブコーディング</td>
+<td>趣味開発には最適だがビジネスアプリにはギャップ</td>
+</tr>
+</tbody>
+</table></div>
+<h2>AI-DLCの構造</h2>
+<ul>
+<li>AIが要件定義〜設計・実装・テスト・運用自動化までをオーケストレーションします</li>
+<li>人間が検証・意思決定・最終責任を保持します</li>
+<li>3フェーズ×ステージで人間の承認ゲートを通らないと進みません</li>
+</ul>
+<h2>モブエラボレーション</h2>
+<ul>
+<li>要件フェーズからビジネスサイド+開発+テスターが全員集まり、AIに壁打ちしながら要件定義します</li>
+<li>待ち時間ゼロ・「意思決定の速さ=開発スピード」</li>
+</ul>
+<h2>AWSのオープンソース「AI-DLC Workflows」</h2>
+<ul>
+<li><code>/aidlc</code> スキルで開始できます</li>
+<li>V2は「人間の負荷が下がり続ける」設計——検証をAIが学習し、簡単な判断は自動、重要で複雑な判断だけ人間介入です</li>
+</ul>
+<h2>コードを書かなくなった実感</h2>
+<p>福井氏の実感として語られた言葉です。</p>
+<div class="callout callout-info"><p>「もうすっかりコードは書かなくなった。テストの意図（コメント）をレビューし、全部パスすればコードは信頼できるという考え方に変わった」</p></div>
+<h2>スコープの実務基準</h2>
+<ul>
+<li>ユーザーストーリーが10〜15を超えると多いと感じる</li>
+<li>縦断スケルトン（UI〜バックエンドの1本パス）を先にデプロイしてから機能追加する</li>
+<li>最小リリース→成長させるスタイルにしないと疲弊する</li>
+</ul>
+<h2>人間が見る場所</h2>
+<ul>
+<li>意図が反映されているかを確認する: 要件→ユーザーストーリー→モック→設計→テスト意図</li>
+<li>論理矛盾チェックはAIレビューエージェントが先にやるので、人間は意図にフォーカスできる</li>
+<li>「重要で複雑」の重要=ビジネス的に重要という意味</li>
+<li>AIは汎用知識は多いが、その会社独自のドメイン知識は持たない——独自ドメインが反映されているかを判断するのは人間だけ</li>
+</ul>
+<h2>運用のコツ</h2>
+<ul>
+<li>「5分迷ったらAIに壁打ち」</li>
+<li>AIに命令せず引き出す</li>
+<li>シニア×若手×AI+ビジネスサイドのディスカッションで学習効果が進む</li>
+<li>AIの出力が微妙な時=大体自分が状況や制約を入れていない時</li>
+<li>ブラウンフィールド対応はリバースエンジニアリングステージが自動分析</li>
+</ul>
+<h2>実践チェックリスト</h2>
+<p>AI駆動開発に取り入れるチェックリストです。</p>
+<ul>
+<li>[ ] 承認ゲート（何を人間が判断するか）を設計に組み込んでいるか</li>
+<li>[ ] 要件フェーズにビジネスサイドを巻き込めているか</li>
+<li>[ ] ユーザーストーリー数が10〜15以内に収まっているか</li>
+<li>[ ] 縦断スケルトンを先に通し、最小リリースから成長させているか</li>
+<li>[ ] 独自ドメイン知識がAI出力に反映されているかを人間が確認しているか</li>
+<li>[ ] 迷ったら壁打ちする習慣があるか</li>
+</ul>
+<h2>ふりかえり</h2>
+<p>AI-DLCは「AIに全部任せる」でも「AIを道具として一部に使う」でもない、第3の形です。承認ゲートの設計と独自ドメイン知識の判断——この2つを人間が持つことが、AI時代のエンジニアの核心的な価値になります。</p>
+
+        </article>
+
+        <nav class="chapter-nav-bottom">
+            
+            <a href="06-decision-making.html" class="nav-card prev">
+                <span class="nav-label">← 前の章</span>
+                <span class="nav-title">⚖️ 意思決定術のその先</span>
+            </a>
+            
+            
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <p>Findy Webinar Guide — <a href="https://github.com/fukukei23/findy-webinar-guide">GitHub</a>
+         · <a href="https://fukukei23.github.io/guides/interview-glossary/">面接用語集</a>
+         · <a href="https://fukukei23.github.io/guides/">技術ガイド集</a>
+         · <a href="https://fukukei23.github.io/">fukukei23</a></p>
+        <p class="site-version">v1.1 · 2026.11.23</p>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default',
+            themeVariables: { fontSize: '14px' }
+        });
+    </script>
+</body>
+</html>

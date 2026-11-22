@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python環境構築とuv — Findyウェビナー7本要約</title>
+    <meta name="description" content="FindyウェビナーPython環境構築とuvの要約 — エンジニアキャリアとAI時代の開発ガイド">
+    <meta property="og:title" content="Python環境構築とuv — Findyウェビナー7本要約">
+    <meta property="og:description" content="FindyウェビナーPython環境構築とuvの要約">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://fukukei23.github.io/findy-webinar-guide/chapters/05-python-uv.html">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙️</text></svg>">
+</head>
+<body>
+    <header class="site-header">
+        <button class="menu-toggle" aria-label="メニュー" id="menuToggle">
+            <span></span><span></span><span></span>
+        </button>
+        <a href="../index.html" class="site-title">🎙️ Findyウェビナー7本要約</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="テーマ切替">
+            <span class="icon-light">☀️</span>
+            <span class="icon-dark">🌙</span>
+        </button>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html">🏠 ホーム</a>
+        </div>
+        
+        <a href="00-overview.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🎙️</span>
+            このガイドについて
+        </a>
+        
+        <a href="01-vpoe-document-screening.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">📄</span>
+            書類選考のホンネ
+        </a>
+        
+        <a href="02-final-interview.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🎯</span>
+            最終面接のウラ側
+        </a>
+        
+        <a href="03-sier-to-fde.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🚀</span>
+            SIerからFDEへ
+        </a>
+        
+        <a href="04-design-tools.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🛠️</span>
+            設計手法を「道具」として
+        </a>
+        
+        <a href="05-python-uv.html"
+           class="sidebar-link active">
+            <span class="sidebar-icon">🐍</span>
+            Python環境構築とuv
+        </a>
+        
+        <a href="06-decision-making.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">⚖️</span>
+            意思決定術のその先
+        </a>
+        
+        <a href="07-ai-dlc.html"
+           class="sidebar-link">
+            <span class="sidebar-icon">🤖</span>
+            AI-DLCと人の設計判断
+        </a>
+        
+    </nav>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="content">
+        <div class="chapter-nav-top">
+            
+            <a href="04-design-tools.html" class="nav-prev">← 設計手法を「道具」として</a>
+            
+            
+            <a href="06-decision-making.html" class="nav-next">意思決定術のその先 →</a>
+            
+        </div>
+
+        <article class="chapter-body">
+            <h1>05 Python環境構築とuv — 任せていい範囲と判断は人の仕事</h1>
+<aside class="tldr">
+<p><strong>3行で分かる</strong>: uvはPythonインストール〜仮想環境〜パッケージ管理を統合する道具です。
+日常作業は任せてよいが、バージョン選定や更新方針の「判断」は人の仕事です。
+pipは標準機能ではなく、処理系に同梱のサードパーティ管理ツールです。</p>
+</aside>
+<hr />
+<h2>この章について</h2>
+<p>nikkie氏（ユーザベース）が、Python環境構築の変遷とuvへの移行を語ったセッションです。「uvに任せていいのはどこまで？」という問いを軸に、道具と判断の切り分けを整理します。</p>
+<h2>従来のPython環境構築の手順</h2>
+<p>従来はOSごとに手順が異なっていました。</p>
+<ol>
+<li>OSごとのPythonインストール</li>
+<li>仮想環境の作成・有効化</li>
+<li>pipでパッケージ導入</li>
+</ol>
+<h2>pipは標準機能ではない</h2>
+<ul>
+<li>pipはPythonの標準機能ではなく、処理系に同梱されたサードパーティ管理ツールです</li>
+<li>この事実は意外に知られていないと語っています</li>
+</ul>
+<h2>uvが統合するもの</h2>
+<p>uvは次の4つを統合します。</p>
+<ol>
+<li>インストール</li>
+<li>仮想環境</li>
+<li>パッケージ管理</li>
+<li>プロジェクト管理</li>
+</ol>
+<h2>uvに任せられる範囲</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>作業</th>
+<th>uvに任せられるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>環境の作成</td>
+<td>任せられる</td>
+</tr>
+<tr>
+<td>依存解決</td>
+<td>任せられる</td>
+</tr>
+<tr>
+<td>仮想環境の切替</td>
+<td>任せられる</td>
+</tr>
+<tr>
+<td>複数バージョンの管理</td>
+<td>任せられる</td>
+</tr>
+</tbody>
+</table></div>
+<h2>自分で決める領域</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>判断</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pythonバージョンの選定</td>
+<td>どのバージョンをプロジェクトで使うか</td>
+</tr>
+<tr>
+<td>依存の固定・更新方針</td>
+<td>どこまで固定し、いつ更新するか</td>
+</tr>
+<tr>
+<td>組織としてのルール</td>
+<td>チーム・組織での運用ルールの決定</td>
+</tr>
+</tbody>
+</table></div>
+<h2>実践チェックリスト</h2>
+<p>Python環境の運用を見直すチェックリストです。</p>
+<ul>
+<li>[ ] 環境構築の手順がOSごとにばらついていないか（uvで統合できる部分はないか）</li>
+<li>[ ] 「pipは標準機能」と誤解していないか（サードパーティツールという認識があるか）</li>
+<li>[ ] Pythonバージョンの選定理由を説明できるか</li>
+<li>[ ] 依存の固定・更新方針をプロジェクトごとに決めているか</li>
+<li>[ ] 道具に任せる作業と、自分で判断する作業の線引きを明確にしているか</li>
+</ul>
+<h2>ふりかえり</h2>
+<p>uvのような統合ツールは「日常作業の自動化」と「判断の代替」は別物です。道具に任せられる範囲を広げつつ、バージョン選定や更新方針といった判断は自分の責任として持ち続けることが、健全な環境運用の形です。</p>
+
+        </article>
+
+        <nav class="chapter-nav-bottom">
+            
+            <a href="04-design-tools.html" class="nav-card prev">
+                <span class="nav-label">← 前の章</span>
+                <span class="nav-title">🛠️ 設計手法を「道具」として</span>
+            </a>
+            
+            
+            <a href="06-decision-making.html" class="nav-card next">
+                <span class="nav-label">次の章 →</span>
+                <span class="nav-title">⚖️ 意思決定術のその先</span>
+            </a>
+            
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <p>Findy Webinar Guide — <a href="https://github.com/fukukei23/findy-webinar-guide">GitHub</a>
+         · <a href="https://fukukei23.github.io/guides/interview-glossary/">面接用語集</a>
+         · <a href="https://fukukei23.github.io/guides/">技術ガイド集</a>
+         · <a href="https://fukukei23.github.io/">fukukei23</a></p>
+        <p class="site-version">v1.1 · 2026.11.23</p>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default',
+            themeVariables: { fontSize: '14px' }
+        });
+    </script>
+</body>
+</html>
